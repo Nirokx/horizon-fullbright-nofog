@@ -1,0 +1,14 @@
+[package]
+name = "horizon-fullbright-nofog"
+version = "1.0.0"
+edition = "2024"
+license = "MIT"
+description = "Fullbright & NoFog: a native Horizon mod that toggles full brightness and fog"
+publish = false
+
+[lib]
+# This exact source is also injected as `crate::game::fullbright_nofog` by
+# horizon-mixins; the hook helpers only compile inside Horizon.
+path = "mixins/fullbright_nofog/runtime.rs"
+
+[dependencies]
